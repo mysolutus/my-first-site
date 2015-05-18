@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<h1>{{category_name}}</h1>
+	{% if category %}
+		{% if pages %}
+			<ul>
+				{% for page in pages %}
+					<li><a href="{{page.url}}">{{page.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>	
+		{% else %}
+			<strong>No Pages in this Category</strong>
+		{% endif %}	
+	{% else %}	
+			This category {{category_name}} does not exist
+	{% endif %}	
+{% endblock %}

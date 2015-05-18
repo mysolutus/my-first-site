@@ -1,0 +1,1 @@
+INSERT INTO rangoapp_Categorys(name, views, likes) VALUES( "Biology", 123, 56);
